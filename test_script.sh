@@ -65,8 +65,8 @@ fi
 if [ ! -f ./file_folder/web/index.php ]; then
 cat << EOF > ./file_folder/web/index.php
 <?php
-	$website = require_once __DIR__./../app/app.php';
-	$website->run();
+	\$website = require_once __DIR__.'/../app/app.php';
+	\$website->run();
 ?>
 EOF
 
@@ -83,14 +83,14 @@ cat << EOF > ./file_folder/tests/ClassTest.php
 		function()
 		{
 			//Arrange
-			$test = new Class;
+			\$test = new Class;
 
 			//Act
-			$result = $test->;
-			$answer = ;
+			\$result = \$test->();
+			\$answer = ;
 
 			//Assert
-			$this->assertEquals($answer, $result);
+			\$this->assertEquals(\$answer, \$result);
 
 		}
 	}
@@ -102,20 +102,20 @@ fi
 if [ ! -f ./file_folder/app/app.php ]; then
 cat << EOF > ./file_folder/app/app.php
 <?php
-	require_once __DIR__./../vendor/autoload.php";
-	require_once __DIR__./../src/Class.php";
+	require_once __DIR__.'/../vendor/autoload.php';
+	require_once __DIR__.'/../src/Class.php';
 
-	$app = new Silex\Application();
+	\$app = new Silex\Application();
 
-	$app->register(new Silex\Provider\TwigServiceProvider(), array(
-		'twig.path' => __DIR__./../views'
+	\$app->register(new Silex\Provider\TwigServiceProvider(), array(
+		'twig.path' => __DIR__'./../views'
 	));
 
-	$app->get("/", function() use ($app){
-		return $app['twig']->render('home.html.twig');
+	\$app->get("/", function() use (\$app){
+		return \$app['twig']->render('home.html.twig');
 	});
 
-	return $app
+	return \$app
 ?>
 EOF
 
@@ -132,3 +132,29 @@ cat << EOF > ./file_folder/src/Class.php
 EOF
 
 fi
+#home page
+if [ ! -f ./file_folder/views/home.html.twig ]; then
+cat << EOF > .file_folder/views/home.html.twig
+<DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css>
+	</head>
+	<body>
+		<div class="container">
+			<h1></h1>
+			<form action='/---'>
+				<div class="form_group">
+					<label for=""></label>
+					<input id="" name="" type="">
+				</div>
+				<button type="submit" class="btn-success"></button>
+			</form>
+		</div>
+	</body>
+</html>
+EOF
+
+fi
+
