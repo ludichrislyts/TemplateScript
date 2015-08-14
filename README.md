@@ -22,10 +22,12 @@ class name and that should change any references to the class name in the templa
 * Pray
 * Check the location where you saved the "test_script.sh" file, there should be a folder called "file_folder"
 * Open the "file_folder" and enjoy
+* DISCLAIMER= I am not sure of the portability of this script. I used Git Bash on a Windows machine, so 
+the commands used in the script may not work accross platforms. :-(
 
 ## Technologies Used
 
-BASH, VIM
+Git Bash, VIM
 
 ### Legal
 
