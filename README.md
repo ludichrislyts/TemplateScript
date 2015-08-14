@@ -6,7 +6,7 @@
 
 ## Description
 
-_This script will create the folders 'app', 'src', 'tests', 'views', and 'web' in 'file_folder' folder.
+This script will create the folders 'app', 'src', 'tests', 'views', and 'web' in 'file_folder' folder.
 _Files created are app/app.php, src/Class.php, tests/ClassTest.php, and web/index.php.
 Files created include the basic shell of code that is usually always included. 
 **In the src/Class and tests/ClassTest files, do can do a find/replace for "Class" and replace with your 
