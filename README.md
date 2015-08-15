@@ -7,10 +7,10 @@
 ## Description
 
 This script will create the folders 'app', 'src', 'tests', 'views', and 'web' in 'file_folder' folder.
-_Files created are app/app.php, src/Class.php, tests/ClassTest.php, and web/index.php.
-Files created include the basic shell of code that is usually always included. 
-**In the src/Class and tests/ClassTest files, do can do a find/replace for "Class" and replace with your 
-class name and that should change any references to the class name in the template code.
+_Files created are app/app.php, src/Class.php, tests/ClassTest.php, views/home.html.twig, and web/index.php.
+Files created include the basic shell of code that is usually always included.
+
+I know this is an archaic type of script, but I mainly just wanted to see if I could get it to work.
 
 ## Setup
 
